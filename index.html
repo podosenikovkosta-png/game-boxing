@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	
+	<div style="display: block;">
+		<img class="upe" src="up.png" style="height: 50px; margin-left: 50px;" alt="">
+		<div style="display: flex;">
+			<img class="levo" src="left.png" style="height: 50px;" alt="">
+			<img class="donw" src="down.png" style="height: 50px;" alt="">
+			<img class="rit" src="right.png" style="height: 50px;" alt="">
+		</div>
+	</div>
+	<img class="spri" src="sprite.png" style="position: absolute; left: 200px; top: 500px;" alt="">
+	
+	<script>
+		//8. Управляй бойцом, используя стрелки. 
+let far = 200;
+let fut = 500;
+document.querySelector(".upe").onclick = function () {
+	far = far - 50;
+	document.querySelector(".spri").style.top = far + "px";
+}
+document.querySelector(".donw").onclick = function () {
+	far = far + 50;
+	document.querySelector(".spri").style.top = far + "px";
+}
+document.querySelector(".levo").onclick = function () {
+	fut = fut - 50;
+	document.querySelector(".spri").style.left = fut + "px";
+}
+document.querySelector(".rit").onclick = function () {
+	fut = fut + 50;
+	document.querySelector(".spri").style.left = fut + "px";
+}
+	</script>
+</body>
+</html>
